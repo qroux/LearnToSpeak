@@ -16,6 +16,7 @@ export type RootNavigatorStackParamList = {
   // AUTHENTICATED
   [routeNames.authenticatedNavigator]: {screen: AuthenticatedRouteValues};
   [routeNames.dashboard]: undefined;
+  [routeNames.reader]: undefined;
   [routeNames.settings]: undefined;
 };
 
@@ -23,11 +24,11 @@ const Stack = createStackNavigator<RootNavigatorStackParamList>();
 
 const RootNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={{headerShown: !false}}>
-      <Stack.Screen
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      {/* <Stack.Screen
         name={routeNames.unAuthenticatedNavigator}
         component={UnAuthenticatedNavigator}
-      />
+      /> */}
       <Stack.Screen
         name={routeNames.authenticatedNavigator}
         component={AuthenticatedNavigator}

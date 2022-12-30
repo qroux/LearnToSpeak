@@ -1,6 +1,7 @@
 const authenticatedRoutes = {
   authenticatedNavigator: 'AuthenticatedNavigator',
   dashboard: 'Dashboard',
+  reader: 'Reader',
   settings: 'Settings',
 } as const;
 
