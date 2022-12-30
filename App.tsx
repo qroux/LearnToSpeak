@@ -1,13 +1,22 @@
-import {ThemeProvider} from '@shopify/restyle';
 import React from 'react';
-import AppRoot from './src/routes/AppRoot';
+import 'react-native-gesture-handler';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+
+import RootNavigator from '@navigators/RootNavigator';
+import {NavigationContainer} from '@react-navigation/native';
+import {ThemeProvider} from '@shopify/restyle';
+
 import theme from './src/theme/theme';
 
 const AppWrapper = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <AppRoot />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider theme={theme}>
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 };
 

@@ -1,22 +1,18 @@
 import {createTheme} from '@shopify/restyle';
 
 const palette = {
-  purpleLight: '#8C6FF7',
-  purplePrimary: '#5A31F4',
-  purpleDark: '#3F22AB',
+  bg: {
+    light: '#FFFFFA',
+  },
 
-  greenLight: '#56DCBA',
-  greenPrimary: '#0ECD9D',
-  greenDark: '#0A906E',
-
-  black: '#0B0B0B',
-  white: '#F0F2F3',
+  black: '#000714',
+  white: '#FFFFFA',
 };
 
 const theme = createTheme({
   colors: {
-    mainBackground: palette.white,
-    cardPrimaryBackground: palette.purplePrimary,
+    mainBackground: palette.bg.light,
+    mainText: palette.black,
   },
   spacing: {
     s: 8,
@@ -27,6 +23,19 @@ const theme = createTheme({
   breakpoints: {
     phone: 0,
     tablet: 768,
+  },
+  textVariants: {
+    h1: {
+      fontWeight: 'bold',
+      fontSize: 34,
+      lineHeight: 42.5,
+      color: 'mainText',
+    },
+    body: {
+      fontSize: 16,
+      lineHeight: 24,
+      color: 'mainText',
+    },
   },
 });
 
