@@ -25,6 +25,9 @@ target 'LearnToSpeak' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+  
+  pod 'GoogleMLKit/TextRecognition','2.2.0'
+
 
   target 'LearnToSpeakTests' do
     inherit! :complete
